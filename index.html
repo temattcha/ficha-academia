@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficha de Exercícios</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      td {
+        text-transform: capitalize;
+      }
+
+      .ficha-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .ficha-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .ficha-table th,
+      .ficha-table td {
+        border: 1px solid #f8f8f8;
+        padding: 12px 15px;
+      }
+
+      .ficha-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .ficha-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+      }
+
+      .ficha-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+      }
+
+      .ficha-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+      }
+
+      .header-main {
+        background: #02b5bb !important;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .header-text:nth-child(odd) {
+        background: rgb(224, 88, 190);
+      }
+
+      .titulo .odd {
+        background-color: rgb(175, 16, 175) !important;
+      }
+
+      .header-text {
+        border-radius: 5px;
+      }
+
+      .titulo {
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #ddd;
+      }
+
+      input {
+        width: 50px;
+        text-align: center;
+        border: 1px solid #ccc;
+      }
+
+      .btn-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ficha de Exercícios Localizados</h1>
+
+    <table class="ficha-table" id="fichaTable">
+      <!-- Primeira linha de grupos: Peitorais (12), Tríceps (9), Ombros(9), Pernas(15) -->
+      <!-- Precisamos de 15 linhas, pois Pernas tem 15 exercícios -->
+      <thead>
+        <tr class="header-main">
+          <th colspan="5" class="header-text">PEITORAIS</th>
+          <th colspan="5" class="header-text">TRÍCEPS</th>
+          <th colspan="5" class="header-text">OMBROS</th>
+          <th colspan="5" class="header-text">PERNAS</th>
+        </tr>
+        <tr class="titulo">
+          <th class="odd">TREINO</th>
+          <th class="odd">EXERCÍCIOS</th>
+          <th class="odd">SÉRIES</th>
+          <th class="odd">REPETIÇÕES</th>
+          <th class="odd">CARGA</th>
+          <th>TREINO</th>
+          <th>EXERCÍCIOS</th>
+          <th>SÉRIES</th>
+          <th>REPETIÇÕES</th>
+          <th>CARGA</th>
+          <th class="odd">TREINO</th>
+          <th class="odd">EXERCÍCIOS</th>
+          <th class="odd">SÉRIES</th>
+          <th class="odd">REPETIÇÕES</th>
+          <th class="odd">CARGA</th>
+          <th>TREINO</th>
+          <th>EXERCÍCIOS</th>
+          <th>SÉRIES</th>
+          <th>REPETIÇÕES</th>
+          <th>CARGA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 15 linhas para: Peitorais (12 exercícios + 3 vazios), Tríceps (9 + 6 vazios), Ombros (9 + 6 vazios), Pernas (15 exercícios) -->
+
+        <!-- 1 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="cross-over"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>cross-over</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="cross-over"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="cross-over"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="cross-over"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="coice"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>coice</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="coice"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="coice"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="coice"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="crucifixo invertido"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>crucifixo invertido</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="crucifixo invertido"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="crucifixo invertido"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="crucifixo invertido"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="abducao"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>abducao</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="abducao"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="abducao"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="abducao"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 2 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="crucifixo"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>crucifixo</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="crucifixo"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="crucifixo"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="crucifixo"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="frances"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>frances</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="frances"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="frances"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="frances"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento barra"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>desenvolvimento barra</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento barra"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento barra"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento barra"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aducao"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>aducao</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aducao"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aducao"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aducao"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 3 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="flexao braco"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>flexao braco</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="flexao braco"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="flexao braco"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="flexao braco"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulley</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao lateral"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>elevacao lateral</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao lateral"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao lateral"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao lateral"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>agachamento</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 4 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="fly"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>fly</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="fly"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="fly"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="fly"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley unilateral"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulley unilateral</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley unilateral"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley unilateral"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley unilateral"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao barra supinada"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>elevacao barra supinada</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao barra supinada"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao barra supinada"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao barra supinada"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento bulgaro"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>agachamento bulgaro</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento bulgaro"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento bulgaro"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="agachamento bulgaro"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 5 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="paralelas"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>paralelas</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="paralelas"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="paralelas"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="paralelas"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley corda"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulley corda</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley corda"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley corda"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley corda"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao frontal"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>elevacao frontal</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao frontal"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao frontal"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="elevacao frontal"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="afundo"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>afundo</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="afundo"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="afundo"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="afundo"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 6 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pec-deck"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pec-deck</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pec-deck"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pec-deck"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pec-deck"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley supinado"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulley supinado</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley supinado"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley supinado"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="pulley supinado"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="encolhimento"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>encolhimento</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="encolhimento"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="encolhimento"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="encolhimento"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="avanco"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>avanco</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="avanco"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="avanco"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="avanco"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 7 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pull over"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pull over</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pull over"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pull over"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="pull over"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="supinado"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supinado</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="supinado"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="supinado"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="supinado"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento arnold"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>desenvolvimento arnold</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento arnold"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento arnold"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="desenvolvimento arnold"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aviao"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>aviao</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aviao"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aviao"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="aviao"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 8 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino reto"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supino reto</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino reto"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino reto"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino reto"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="testa"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>testa</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="testa"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="testa"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="testa"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="puxada rosto"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>puxada rosto</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="puxada rosto"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="puxada rosto"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="puxada rosto"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="elevacao pelvica"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>elevacao pelvica</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="elevacao pelvica"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="elevacao pelvica"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="elevacao pelvica"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 9 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino inclinado"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supino inclinado</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino inclinado"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino inclinado"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino inclinado"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="banco"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>banco</td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="banco"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="banco"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="triceps"
+              data-exercicio="banco"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="remada alta"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>remada alta</td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="remada alta"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="remada alta"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="ombros"
+              data-exercicio="remada alta"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="extensora"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>extensora</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="extensora"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="extensora"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="extensora"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 10 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino declinado"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supino declinado</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino declinado"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino declinado"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino declinado"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- triceps vazio pois acabou os exercícios -->
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- ombros vazio pois acabou os exercícios -->
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora deitada"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>flexora deitada</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora deitada"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora deitada"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora deitada"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 11 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino vertical"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supino vertical</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino vertical"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino vertical"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino vertical"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora sentada"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>flexora sentada</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora sentada"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora sentada"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="flexora sentada"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 12 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino articulado inclinado"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supino articulado inclinado</td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino articulado inclinado"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino articulado inclinado"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="peitorais"
+              data-exercicio="supino articulado inclinado"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="hack"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>hack</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="hack"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="hack"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="hack"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 13 (peitorais acabou, linhas vazias) -->
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="levantamento terra"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>levantamento terra</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="levantamento terra"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="levantamento terra"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="levantamento terra"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 14 -->
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="leg press 45"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>leg press 45</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="leg press 45"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="leg press 45"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="leg press 45"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+        <!-- 15 -->
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="stiff"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>stiff</td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="stiff"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="stiff"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="pernas"
+              data-exercicio="stiff"
+              data-tipo="CARGA"
+            />
+          </td>
+        </tr>
+      </tbody>
+
+      <!-- Segunda linha de grupos: Costas(11), Biceps(9), Abdomen(5), Outros(7) -->
+      <!-- Precisamos de 11 linhas, pois Costas tem 11 exercícios. -->
+      <thead>
+        <tr class="header-main">
+          <th colspan="5" class="header-text">COSTAS</th>
+          <th colspan="5" class="header-text">BÍCEPS</th>
+          <th colspan="5" class="header-text">ABDOMEN</th>
+          <th colspan="5" class="header-text">OUTROS</th>
+        </tr>
+        <tr class="titulo">
+          <th>TREINO</th>
+          <th>EXERCÍCIOS</th>
+          <th>SÉRIES</th>
+          <th>REPETIÇÕES</th>
+          <th>CARGA</th>
+          <th>TREINO</th>
+          <th>EXERCÍCIOS</th>
+          <th>SÉRIES</th>
+          <th>REPETIÇÕES</th>
+          <th>CARGA</th>
+          <th>TREINO</th>
+          <th>EXERCÍCIOS</th>
+          <th>SÉRIES</th>
+          <th>REPETIÇÕES</th>
+          <th>CARGA</th>
+          <th>TREINO</th>
+          <th>EXERCÍCIOS</th>
+          <th>SÉRIES</th>
+          <th>REPETIÇÕES</th>
+          <th>CARGA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 11 linhas para: Costas(11), Biceps(9+2vazios), Abdomen(5+6vazios), Outros(7+4vazios) -->
+
+        <!-- 1 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="barra fixa"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>barra fixa</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="barra fixa"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="barra fixa"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="barra fixa"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="martelo"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>martelo</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="martelo"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="martelo"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="martelo"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="supra"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>supra</td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="supra"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="supra"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="supra"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 2 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="lombar"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>lombar</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="lombar"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="lombar"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="lombar"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="polia cross"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>polia cross</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="polia cross"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="polia cross"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="polia cross"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="infra"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>infra</td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="infra"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="infra"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="infra"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 3 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley costas"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulley costas</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley costas"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley costas"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley costas"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca direta"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rosca direta</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca direta"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca direta"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca direta"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="obliquo"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>obliquo</td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="obliquo"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="obliquo"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="obliquo"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 4 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley frente"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulley frente</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley frente"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley frente"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulley frente"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca scott"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rosca scott</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca scott"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca scott"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca scott"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="rodinha"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rodinha</td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="rodinha"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="rodinha"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="rodinha"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 5 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulldown"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>pulldown</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulldown"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulldown"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="pulldown"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca alternada"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rosca alternada</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca alternada"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca alternada"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca alternada"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="4 apoios"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>4 apoios</td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="4 apoios"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="4 apoios"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="abdomen"
+              data-exercicio="4 apoios"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 6 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="peck deck invertido"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>peck deck invertido</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="peck deck invertido"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="peck deck invertido"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="peck deck invertido"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca simultanea"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rosca simultanea</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca simultanea"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca simultanea"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca simultanea"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- Abdomen acabou -->
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 7 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada sentado"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>remada sentado</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada sentado"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada sentado"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada sentado"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca concentrada"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rosca concentrada</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca concentrada"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca concentrada"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca concentrada"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 8 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada pulley"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>remada pulley</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada pulley"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada pulley"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada pulley"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca / cabo"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>rosca / cabo</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca / cabo"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca / cabo"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="rosca / cabo"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 9 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada unilateral"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>remada unilateral</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada unilateral"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada unilateral"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada unilateral"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="scott articulado maquina"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>scott articulado maquina</td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="scott articulado maquina"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="scott articulado maquina"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="biceps"
+              data-exercicio="scott articulado maquina"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <!-- 10 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada cavalinho"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>remada cavalinho</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada cavalinho"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada cavalinho"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada cavalinho"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- biceps vazio -->
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- abdomen vazio -->
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- outros vazio -->
+        </tr>
+        <!-- 11 -->
+        <tr>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada curvada"
+              data-tipo="TREINO"
+            />
+          </td>
+          <td>remada curvada</td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada curvada"
+              data-tipo="SÉRIES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada curvada"
+              data-tipo="REPETIÇÕES"
+            />
+          </td>
+          <td>
+            <input
+              data-grupo="costas"
+              data-exercicio="remada curvada"
+              data-tipo="CARGA"
+            />
+          </td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btn-container">
+      <button id="btnCarregar">Carregar</button>
+      <button id="btnSalvar">Salvar</button>
+    </div>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxh_CC2lZF4FVeaX2WIxEksJ75gpgtjB-jWidKIsPF6mAH6mNiIFE8HYKRf5vP_7I4QGg/exec"; // Coloque aqui a URL do seu Web App do Apps Script
+
+      function carregarDados() {
+        fetch(scriptURL)
+          .then((r) => r.json())
+          .then((data) => {
+            // data: array de objetos { "Treino": "", "Grupo Muscular": "", "Exercício": "", "Séries": "", "Repetições": "", "Carga (kg)": "" }
+            data.forEach((item) => {
+              const treino = item["Treino"];
+              const grupo = item["Grupo Muscular"];
+              const exercicio = item["Exercício"];
+              const ser = item["Séries"];
+              const rep = item["Repetições"];
+              const carg = item["Carga (kg)"];
+
+              const inputTREINO = document.querySelector(
+                `input[data-grupo="${grupo}"][data-exercicio="${exercicio}"][data-tipo="TREINO"]`
+              );
+              const inputSER = document.querySelector(
+                `input[data-grupo="${grupo}"][data-exercicio="${exercicio}"][data-tipo="SÉRIES"]`
+              );
+              const inputREP = document.querySelector(
+                `input[data-grupo="${grupo}"][data-exercicio="${exercicio}"][data-tipo="REPETIÇÕES"]`
+              );
+              const inputCARG = document.querySelector(
+                `input[data-grupo="${grupo}"][data-exercicio="${exercicio}"][data-tipo="CARGA"]`
+              );
+
+              if (inputTREINO) inputTREINO.value = treino;
+              if (inputSER) inputSER.value = ser;
+              if (inputREP) inputREP.value = rep;
+              if (inputCARG) inputCARG.value = carg;
+            });
+            alert("Dados carregados com sucesso!");
+          })
+          .catch((err) => {
+            console.error("Erro ao carregar dados:", err);
+            alert("Erro ao carregar dados.");
+          });
+      }
+
+      function salvarDados() {
+        const inputs = document.querySelectorAll(
+          "input[data-grupo][data-exercicio][data-tipo]"
+        );
+        const dados = [];
+
+        inputs.forEach((input) => {
+          const grupo = input.getAttribute("data-grupo");
+          const exercicio = input.getAttribute("data-exercicio");
+          const tipo = input.getAttribute("data-tipo");
+          const valor = input.value;
+
+          let registro = dados.find(
+            (d) => d.grupo === grupo && d.exercicio === exercicio
+          );
+          if (!registro) {
+            registro = {
+              treino: "",
+              grupo,
+              exercicio,
+              series: "",
+              repeticoes: "",
+              carga: "",
+            };
+            dados.push(registro);
+          }
+
+          if (tipo === "TREINO") registro.treino = valor;
+          if (tipo === "SÉRIES") registro.series = valor;
+          if (tipo === "REPETIÇÕES") registro.repeticoes = valor;
+          if (tipo === "CARGA") registro.carga = valor;
+        });
+
+        fetch(scriptURL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ exercicios: dados }),
+        })
+          .then(() => {
+            alert("Dados salvos com sucesso!");
+          })
+          .catch((err) => {
+            console.error("Erro ao salvar dados:", err);
+            alert("Erro ao salvar dados.");
+          });
+      }
+
+      document
+        .getElementById("btnCarregar")
+        .addEventListener("click", carregarDados);
+      document
+        .getElementById("btnSalvar")
+        .addEventListener("click", salvarDados);
+    </script>
+  </body>
+</html>
