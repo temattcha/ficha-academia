@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Treino A</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #009879;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #009879;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+    .header {
+      background-color: #02b5bb;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Treino A</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="treino-b.html">Treino B</a></li>
+      <li><a href="treino-c.html">Treino C</a></li>
+      <li><a href="treino-d.html">Treino D</a></li>
+      <li><a href="gerenciar.html">Gerenciar Ficha</a></li>
+    </ul>
+  </nav>
+
+  <div id="exercicios-container">
+    <p>Carregando exercícios...</p>
+  </div>
+
+  <script>
+    const treinoLetra = 'A'; // Defina a letra do treino aqui (A, B, C, D)
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxh_CC2lZF4FVeaX2WIxEksJ75gpgtjB-jWidKIsPF6mAH6mNiIFE8HYKRf5vP_7I4QGg/exec";
+
+    function carregarExercicios() {
+      fetch(scriptURL)
+        .then(response => response.json())
+        .then(data => {
+          // Filtrar exercícios para o Treino A
+          const exerciciosTreinoA = data.filter(item => item["Treino"].toUpperCase() === treinoLetra);
+          
+          if (exerciciosTreinoA.length === 0) {
+            document.getElementById('exercicios-container').innerHTML = '<p>Nenhum exercício encontrado para o Treino A.</p>';
+            return;
+          }
+
+          // Criar tabela
+          let tabelaHTML = `
+            <table>
+              <thead>
+                <tr class="header">
+                  <th>Grupo Muscular</th>
+                  <th>Exercício</th>
+                  <th>Séries</th>
+                  <th>Repetições</th>
+                  <th>Carga (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+          `;
+
+          exerciciosTreinoA.forEach(item => {
+            tabelaHTML += `
+              <tr>
+                <td>${item["Grupo Muscular"]}</td>
+                <td>${item["Exercício"]}</td>
+                <td>${item["Séries"]}</td>
+                <td>${item["Repetições"]}</td>
+                <td>${item["Carga (kg)"]}</td>
+              </tr>
+            `;
+          });
+
+          tabelaHTML += `
+              </tbody>
+            </table>
+          `;
+
+          document.getElementById('exercicios-container').innerHTML = tabelaHTML;
+        })
+        .catch(error => {
+          console.error('Erro ao carregar dados:', error);
+          document.getElementById('exercicios-container').innerHTML = '<p>Erro ao carregar exercícios.</p>';
+        });
+    }
+
+    // Chamar a função ao carregar a página
+    window.onload = carregarExercicios;
+  </script>
+</body>
+</html>
