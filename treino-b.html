@@ -53,10 +53,10 @@
   </style>
 </head>
 <body>
-  <h1>Treino A</h1>
+  <h1>Treino B</h1>
   <nav>
     <ul>
-      <li><a href="treino-b.html">Treino B</a></li>
+      <li><a href="treino-a.html">Treino A</a></li>
       <li><a href="treino-c.html">Treino C</a></li>
       <li><a href="treino-d.html">Treino D</a></li>
       <li><a href="gerenciar.html">Gerenciar Ficha</a></li>
@@ -68,18 +68,18 @@
   </div>
 
   <script>
-    const treinoLetra = 'A'; // Defina a letra do treino aqui (A, B, C, D)
+    const treinoLetra = 'B'; // Defina a letra do treino aqui (A, B, C, D)
     const scriptURL = "https://script.google.com/macros/s/AKfycbxh_CC2lZF4FVeaX2WIxEksJ75gpgtjB-jWidKIsPF6mAH6mNiIFE8HYKRf5vP_7I4QGg/exec";
 
     function carregarExercicios() {
       fetch(scriptURL)
         .then(response => response.json())
         .then(data => {
-          // Filtrar exercícios para o Treino A
+          // Filtrar exercícios para o Treino B
           const exerciciosTreinoA = data.filter(item => item["Treino"].toUpperCase().includes(treinoLetra));
           
           if (exerciciosTreinoA.length === 0) {
-            document.getElementById('exercicios-container').innerHTML = '<p>Nenhum exercício encontrado para o Treino A.</p>';
+            document.getElementById('exercicios-container').innerHTML = '<p>Nenhum exercício encontrado para o Treino B.</p>';
             return;
           }
 
